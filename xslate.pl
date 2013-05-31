@@ -11,8 +11,7 @@ my $xslate = Text::Xslate->new({
 });
 
 my @tmpls = qw/ contentA.tt contentB.tt /;
-for my $tmpl (map { "./tmpl/$_" } @tmpls) {
-    $tmpl =~ s{^./tmpl/}{};
+for my $tmpl (@tmpls) {
     print "\@\@$tmpl\n";
     print $xslate->render($tmpl);
 }
