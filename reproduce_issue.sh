@@ -10,4 +10,4 @@ touch ./tmpl/content[AB].tt
 
 ./xslate.pl > got.txt
 
-diff -upd expected.txt got.txt
+diff -ud expected.txt got.txt
